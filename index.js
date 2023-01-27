@@ -1,14 +1,15 @@
-
-// Create connection
-
-const mysql = require('mysql');
-const connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'wine_index'
+const express = require("express");
+const app = express();
+const port = 3000;
+app.use(express.json());
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+app.get("/", (req, res) => {
+  res.json({ message: "ok" });
 });
-connection.connect((err) => {
-  if (err) throw err;
-  console.log('Connected!');
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
 });
