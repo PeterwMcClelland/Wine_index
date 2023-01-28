@@ -1,0 +1,21 @@
+* {
+    margin: 0px;
+}
+
+/* header */
+
+.header {
+    background-color: burlywood;
+    height: 85px;
+}
+
+li {
+    text-align: center;
+    list-style-type: none;
+    font-size: xx-large;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}

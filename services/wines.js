@@ -22,9 +22,9 @@ async function create(wines){
 
   const result = await db.query(
     `INSERT INTO wines
-    (id, brand, vintage, varietal, appellation, harvest_date, aging, bottling_date, alcohol) 
+    (brand, vintage, varietal, appellation, harvest_date, aging, bottling_date, alcohol) 
     VALUES 
-    (${wines.id}, ${wines.brand}, ${wines.vintage}, ${wines.varietal}, ${wines.appellation}, ${wines.harvest_date}, ${wines.aging}, ${wines.bottling_date}, ${wines.alcohol})`
+    (${wines.brand}, ${wines.vintage}, ${wines.varietal}, ${wines.appellation}, ${wines.harvest_date}, ${wines.aging}, ${wines.bottling_date}, ${wines.alcohol})`
   );
 
   let message = 'Error in creating Index';
