@@ -13,7 +13,7 @@
         Varietal: <input type="text" name = "varietal" /><br/>
         Appellation: <input type="text" name = "appellation" /><br/>
         Harvest Date: <input type="text" name = "harvest_date" /><br/>
-        Aging Date: <input type="text" name = "aging_date" /><br/>
+        Aging Date: <input type="text" name = "aging" /><br/>
         Bottling Date: <input type="text" name = "bottling_date" /><br/>
         Alcohol: <input type="text" name = "alcohol" /><br/>
         <input type="submit" />
@@ -30,7 +30,11 @@
 
 </head>
 <body>
-<form action="/wines.js" method="POST">
+<form action="http://localhost:3000/wines" method="POST" id="#create">
+    <p>
+        <label for="id">ID:</label>
+        <input type="number" name="id" id="id">
+    </p>
     <p>
         <label for="brand">Brand:</label>
         <input type="text" name="brand" id="brand">
@@ -52,8 +56,8 @@
         <input type="text" name="harvest_date" id="harvest_date">
     </p>
     <p>
-        <label for="aging_date">Aging Date:</label>
-        <input type="text" name="aging_date" id="aging_date">
+        <label for="aging">Aging:</label>
+        <input type="text" name="aging" id="aging">
     </p>
     <p>
         <label for="bottling_date">Bottling Date:</label>
@@ -66,6 +70,6 @@
     <input type="submit" value="Submit">
 </form>
 
-
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>

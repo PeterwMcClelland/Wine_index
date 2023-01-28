@@ -4,9 +4,9 @@ const config = {
       host: "localhost",
       user: "root",
       password: "",
-      database: "wine_index",
+      database: "wineindex",
     },
     listPerPage: 10,
   };
-  
+
   module.exports = config;

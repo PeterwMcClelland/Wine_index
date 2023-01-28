@@ -6,7 +6,7 @@ const config = require('../config');
 async function getMultiple(page = 1){
   const offset = helper.getOffset(page, config.listPerPage);
   const rows = await db.query(
-    `SELECT id, brand, vintage, varietal, appellation, harvest_date, aging_date, bottling_date, alcohol 
+    `SELECT id, brand, vintage, varietal, appellation, harvest_date, aging, bottling_date, alcohol 
     FROM wines LIMIT ${offset},${config.listPerPage}`
   );
   const data = helper.emptyOrRows(rows);
@@ -19,11 +19,12 @@ async function getMultiple(page = 1){
 }
 
 async function create(wines){
+
   const result = await db.query(
-    `INSERT INTO wines 
-    (id, brand, vintage, varietal, appellation, harvest_date, aging_date, bottling_date, alcohol) 
+    `INSERT INTO wines
+    (id, brand, vintage, varietal, appellation, harvest_date, aging, bottling_date, alcohol) 
     VALUES 
-    (${wines.id}, ${wines.brand}, ${wines.vintage}, ${wines.varietal}, ${wines.appellation}, ${wines.harvest_date}, ${wines.aging_date}, ${wines.bottling_date}, ${wines.alcohol})`
+    (${wines.id}, ${wines.brand}, ${wines.vintage}, ${wines.varietal}, ${wines.appellation}, ${wines.harvest_date}, ${wines.aging}, ${wines.bottling_date}, ${wines.alcohol})`
   );
 
   let message = 'Error in creating Index';
@@ -39,7 +40,7 @@ async function update(id, wines){
   const result = await db.query(
     `UPDATE wines 
     SET brand="${wines.brand}", vintage=${wines.vintage}, varietal=${wines.varietal}, 
-    appellation=${wines.appellation}, harvest_date=${wines.harvest_date}, aging_date=${wines.aging_date}, bottling_date${wines.bottling_date}, alcohol${wines.alcohol} 
+    appellation=${wines.appellation}, harvest_date=${wines.harvest_date}, aging=${wines.aging}, bottling_date${wines.bottling_date}, alcohol${wines.alcohol} 
     WHERE id=${id}` 
   );
 

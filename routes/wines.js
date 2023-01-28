@@ -37,7 +37,7 @@ router.delete('/:id', async function(req, res, next) {
   try {
     res.json(await wines.remove(req.params.id));
   } catch (err) {
-    console.error(`Error while deleting programming language`, err.message);
+    console.error(`Error while deleting Index`, err.message);
     next(err);
   }
 });
