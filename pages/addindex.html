@@ -28,44 +28,50 @@
 <meta charset="UTF-8">
 <title>Add Index</title>
 
+<link rel="stylesheet" href="../assets/index.css"/>
 </head>
+
+<header class="header">
+    <h1>Wine Index</h1>
+</header>
+
 <body>
 <form action="http://localhost:3000/wines" method="POST" id="#create">
-    <!-- <p>
-        <label for="id">ID:</label>
-        <input type="number" name="id" id="id">
-    </p> -->
+    <p>
+        <label for="bottle_name">Name:</label>
+        <input value="''" type="text" name="bottle_name" id="bottle_name">
+    </p>
     <p>
         <label for="brand">Brand:</label>
-        <input type="text" name="brand" id="brand">
+        <input value="''" type="text" name="brand" id="brand">
     </p>
     <p>
         <label for="vintage">Vintage:</label>
-        <input type="text" name="vintage" id="vintage">
+        <input value="''" type="text" name="vintage" id="vintage">
     </p>
     <p>
         <label for="varietal">Varietal:</label>
-        <input type="text" name="varietal" id="varietal">
+        <input value="''" type="text" name="varietal" id="varietal">
     </p>
     <p>
         <label for="appellation">Appellation:</label>
-        <input type="text" name="appellation" id="appellation">
+        <input value="''" type="text" name="appellation" id="appellation">
     </p>
     <p>
         <label for="harvest_date">Harvest Date:</label>
-        <input type="text" name="harvest_date" id="harvest_date">
+        <input value="''" type="text" name="harvest_date" id="harvest_date">
     </p>
     <p>
         <label for="aging">Aging:</label>
-        <input type="text" name="aging" id="aging">
+        <input value="''" type="text" name="aging" id="aging">
     </p>
     <p>
         <label for="bottling_date">Bottling Date:</label>
-        <input type="text" name="bottling_date" id="bottling_date">
+        <input value="''" type="text" name="bottling_date" id="bottling_date">
     </p>
     <p>
         <label for="alcohol">Alcohol:</label>
-        <input type="text" name="alcohol" id="alcohol">
+        <input value="''" type="text" name="alcohol" id="alcohol">
     </p>
     <input type="submit" value="Submit">
 </form>
