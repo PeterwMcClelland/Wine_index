@@ -5,8 +5,17 @@
 /* header */
 
 .header {
-    background-color: burlywood;
+    background-color: hsl(60, 56%, 91%, .5);
     height: 85px;
+  top: 0;
+  position: fixed!important;
+  z-index: 1000;
+  width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-content: space-between;
 }
 
 li {
@@ -14,9 +23,44 @@ li {
     list-style-type: none;
     font-size: xx-large;
     font-family: monospace;
+    margin-left: 30%
 }
 
 a {
     text-decoration: none;
     color: black;
+}
+
+/* Index.html */
+
+.backgroundimg {
+    top: 0;
+  position: sticky;
+  position: fixed!important;
+  width: 100%;
+}
+
+
+/* add wine */
+
+.backgroundaddwine {
+    top: 0;
+  position: sticky;
+  position: fixed!important;
+  width: 100%;
+  background-image: url(./images/champagne-caves-wine-cellars-05.webp);
+  background-position-x: center;
+}
+
+.addform {
+    text-align-last: center;
+    font-family: monospace;
+    white-space: pre-line;
+    padding-top: 100px;
+    font-size: smaller;
+}
+
+.formtext {
+    color: beige;
+    font-size: x-large;
 }

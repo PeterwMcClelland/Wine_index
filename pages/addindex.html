@@ -32,45 +32,54 @@
 </head>
 
 <header class="header">
-    <h1>Wine Index</h1>
+    <a href="../index.html"><h1>Wine Index</h1></a>
+    <nav class="navbar">
+        <li>
+            Add Wines
+        </li>
+        <li>
+            <a class="nav-link" href="./pages/gallery.html">Wine Gallery</a>
+        </li>
+    </nav>
 </header>
 
-<body>
-<form action="http://localhost:3000/wines" method="POST" id="#create">
+<body class="backgroundaddwine">
+    
+<form class="addform" action="http://localhost:3000/wines" method="POST" id="#create">
     <p>
-        <label for="bottle_name">Name:</label>
+        <label class="formtext" for="bottle_name">Name:</label>
         <input value="''" type="text" name="bottle_name" id="bottle_name">
     </p>
     <p>
-        <label for="brand">Brand:</label>
+        <label class="formtext" for="brand">Brand:</label>
         <input value="''" type="text" name="brand" id="brand">
     </p>
     <p>
-        <label for="vintage">Vintage:</label>
+        <label class="formtext" for="vintage">Vintage:</label>
         <input value="''" type="text" name="vintage" id="vintage">
     </p>
     <p>
-        <label for="varietal">Varietal:</label>
+        <label class="formtext" for="varietal">Varietal:</label>
         <input value="''" type="text" name="varietal" id="varietal">
     </p>
     <p>
-        <label for="appellation">Appellation:</label>
+        <label class="formtext" for="appellation">Appellation:</label>
         <input value="''" type="text" name="appellation" id="appellation">
     </p>
     <p>
-        <label for="harvest_date">Harvest Date:</label>
+        <label class="formtext" for="harvest_date">Harvest Date:</label>
         <input value="''" type="text" name="harvest_date" id="harvest_date">
     </p>
     <p>
-        <label for="aging">Aging:</label>
+        <label class="formtext" for="aging">Aging:</label>
         <input value="''" type="text" name="aging" id="aging">
     </p>
     <p>
-        <label for="bottling_date">Bottling Date:</label>
+        <label class="formtext" for="bottling_date">Bottling Date:</label>
         <input value="''" type="text" name="bottling_date" id="bottling_date">
     </p>
     <p>
-        <label for="alcohol">Alcohol:</label>
+        <label class="formtext" for="alcohol">Alcohol:</label>
         <input value="''" type="text" name="alcohol" id="alcohol">
     </p>
     <input type="submit" value="Submit">
