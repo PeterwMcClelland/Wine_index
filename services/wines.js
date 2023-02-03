@@ -53,6 +53,8 @@ async function update(id, wines){
   return {message};
 }
 
+
+
 async function remove(id){
   const result = await db.query(
     `DELETE FROM wines WHERE id=${id}`
