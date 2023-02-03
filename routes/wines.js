@@ -4,7 +4,7 @@ const wines = require('../services/wines');
 
 /* GET wines */
 router.get('/', async function(req, res, next) {
-  try {
+ try {
     res.json(await wines.getMultiple(req.query.page));
   } catch (err) {
     console.error(`Error while getting wines. `, err.message);
